@@ -65,12 +65,8 @@ ${formData.comentarios || 'No hay comentarios'}
 
     console.log("🔄 Enviando a EmailJS...");
 
-    // Enviar con EmailJS - SIN DATOS PERSONALES
+    // Enviar con EmailJS - SOLO EL MENSAJE, SIN DATOS PERSONALES
     emailjs.send("service_ojzlb8c", "template_qfbj6rg", {
-        firstName: "Encuesta Anónima",
-        lastName: "Sistema",
-        email: "encuesta@formularios.com",
-        phone: "No requerido",
         message: emailMessage
     })
     .then((response) => {
