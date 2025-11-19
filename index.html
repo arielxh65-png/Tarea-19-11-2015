@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Formularios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-file-alt"></i>
+                <h1>Sistema de Formularios</h1>
+            </div>
+            <nav>
+                <a href="index.html" class="nav-btn active"><i class="fas fa-home"></i> Inicio</a>
+                <a href="datos.html" class="nav-btn"><i class="fas fa-user"></i> Datos Personales</a>
+                <a href="encuesta.html" class="nav-btn"><i class="fas fa-poll"></i> Encuesta</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="hero-section">
+                <div class="hero-text">
+                    <h2>Bienvenido al Sistema de Formularios</h2>
+                    <p>Selecciona el tipo de formulario que deseas completar</p>
+                </div>
+                <div class="hero-image">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+            </div>
+
+            <div class="buttons-container">
+                <div class="button-card" onclick="location.href='datos.html'">
+                    <div class="card-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Formulario de Datos Personales</h3>
+                    <p>Completa tu información personal básica</p>
+                    <div class="card-features">
+                        <span><i class="fas fa-check"></i> Información personal</span>
+                        <span><i class="fas fa-check"></i> Datos de contacto</span>
+                        <span><i class="fas fa-check"></i> Información demográfica</span>
+                    </div>
+                    <button class="action-btn">Ir al Formulario</button>
+                </div>
+
+                <div class="button-card" onclick="location.href='encuesta.html'">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Formulario de Encuesta</h3>
+                    <p>Comparte tus opiniones y preferencias</p>
+                    <div class="card-features">
+                        <span><i class="fas fa-check"></i> Gustos musicales</span>
+                        <span><i class="fas fa-check"></i> Preferencias deportivas</span>
+                        <span><i class="fas fa-check"></i> Información laboral</span>
+                    </div>
+                    <button class="action-btn">Ir al Formulario</button>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Datos Seguros</h4>
+                    <p>Toda la información se maneja con estrictos protocolos de seguridad</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Rápido y Fácil</h4>
+                    <p>Completa los formularios en minutos con nuestra interfaz intuitiva</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Totalmente Responsivo</h4>
+                    <p>Accede desde cualquier dispositivo sin perder funcionalidad</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Sistema de Formularios. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
