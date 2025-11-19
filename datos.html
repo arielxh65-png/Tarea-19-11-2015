@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Datos Personales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-user"></i>
+                <h1>Datos Personales</h1>
+            </div>
+            <nav>
+                <a href="index.html" class="nav-btn"><i class="fas fa-home"></i> Inicio</a>
+                <a href="datos.html" class="nav-btn active"><i class="fas fa-user"></i> Datos Personales</a>
+                <a href="encuesta.html" class="nav-btn"><i class="fas fa-poll"></i> Encuesta</a>
+            </nav>
+        </header>
+
+        <main class="form-container">
+            <div class="form-header">
+                <h2>Formulario de Datos Personales</h2>
+                <p>Completa tu información personal en el siguiente formulario</p>
+            </div>
+
+            <form id="personalDataForm" class="animated-form">
+                <div class="form-section">
+                    <h3><i class="fas fa-id-card"></i> Información Básica</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ci">Cédula de Identidad *</label>
+                            <input type="text" id="ci" name="ci" placeholder="Ej: 12345678" required>
+                            <i class="fas fa-id-card input-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                            <i class="fas fa-user input-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido *</label>
+                            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                            <i class="fas fa-user input-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> Información de Contacto</h3>
+                    <div class="form-group">
+                        <label for="direccion">Dirección *</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Tu dirección completa" required>
+                        <i class="fas fa-home input-icon"></i>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad *</label>
+                            <select id="ciudad" name="ciudad" required>
+                                <option value="">Selecciona una ciudad</option>
+                                <option value="quito">Quito</option>
+                                <option value="guayaquil">Guayaquil</option>
+                                <option value="cuenca">Cuenca</option>
+                                <option value="ambato">Ambato</option>
+                                <option value="manta">Manta</option>
+                                <option value="loja">Loja</option>
+                                <option value="otra">Otra</option>
+                            </select>
+                            <i class="fas fa-city input-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Ej: 0991234567" required>
+                            <i class="fas fa-phone input-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico *</label>
+                        <input type="email" id="correo" name="correo" placeholder="tu.correo@ejemplo.com" required>
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3><i class="fas fa-venus-mars"></i> Información Demográfica</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sexo">Sexo *</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="sexo" value="masculino" required>
+                                    <span class="radio-custom"></span>
+                                    Masculino
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="sexo" value="femenino">
+                                    <span class="radio-custom"></span>
+                                    Femenino
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="sexo" value="otro">
+                                    <span class="radio-custom"></span>
+                                    Otro
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaNacimiento">Fecha de Nacimiento *</label>
+                            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                            <i class="fas fa-calendar input-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Datos
+                    </button>
+                    <button type="reset" class="reset-btn">
+                        <i class="fas fa-redo"></i>
+                        Limpiar Formulario
+                    </button>
+                </div>
+            </form>
+
+            <div id="status-message" class="status-message"></div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Sistema de Formularios. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script-datos.js"></script>
+</body>
+</html>
