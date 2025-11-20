@@ -65,7 +65,7 @@ ${formData.comentarios || 'No hay comentarios'}
 
     console.log("🔄 Enviando a EmailJS...");
 
-    // Enviar con EmailJS - SOLO EL MENSAJE, SIN DATOS PERSONALES
+    // Enviar con EmailJS - SOLO EL MENSAJE
     emailjs.send("service_ojzlb8c", "template_qfbj6rg", {
         message: emailMessage
     })
@@ -99,3 +99,32 @@ function showStatus(message, type) {
     statusElement.innerText = message;
     statusElement.className = `status-message ${type}`;
 }
+
+// Efectos interactivos para la encuesta
+document.addEventListener('DOMContentLoaded', function() {
+    // Animación para checkboxes y radios
+    const checkboxes = document.querySelectorAll('.checkbox-option, .radio-option');
+    
+    checkboxes.forEach(option => {
+        option.addEventListener('click', function() {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+        });
+    });
+
+    // Mostrar/ocultar campos condicionales
+    const nivelEstudios = document.getElementById('nivelEstudios');
+    const carreraGroup = document.getElementById('carrera').parentElement;
+    
+    nivelEstudios.addEventListener('change', function() {
+        if (this.value === 'ninguno') {
+            carreraGroup.style.opacity = '0.5';
+            carreraGroup.style.pointerEvents = 'none';
+        } else {
+            carreraGroup.style.opacity = '1';
+            carreraGroup.style.pointerEvents = 'all';
+        }
+    });
+});
