@@ -60,7 +60,7 @@ document.getElementById('personalDataForm').addEventListener('submit', function(
 
     console.log("🔄 Enviando a EmailJS...");
 
-    // Enviar con EmailJS - USANDO EL MISMO TEMPLATE
+    // Enviar con EmailJS
     emailjs.send("service_ojzlb8c", "template_qfbj6rg", {
         firstName: formData.nombre,
         lastName: formData.apellido,
@@ -98,3 +98,18 @@ function showStatus(message, type) {
     statusElement.innerText = message;
     statusElement.className = `status-message ${type}`;
 }
+
+// Animación para los campos del formulario
+document.addEventListener('DOMContentLoaded', function() {
+    const inputs = document.querySelectorAll('input, select, textarea');
+    
+    inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.parentElement.style.transform = 'scale(1.02)';
+        });
+        
+        input.addEventListener('blur', function() {
+            this.parentElement.style.transform = 'scale(1)';
+        });
+    });
+});
