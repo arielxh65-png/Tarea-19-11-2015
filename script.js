@@ -21,3 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Efecto para los botones de navegación
     const navButtons = document.querySelectorAll('.nav-btn');
+    
+    navButtons.forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform
